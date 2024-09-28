@@ -1,0 +1,33 @@
+# Creamos un diccionario con el nombre información Personal
+informacion_personal = {"Nombre": "Byron", "Edad": 30, "Ciudad": "Quito", "Profesión": "Asesor Comercial"}
+
+# Creamos una lista opciones
+op = ["nombre", "ciudad", "profesión", "profesion", "edad",]
+
+# Pedimos al usuario que consulte un elemento del diccionario
+elemento = input("¿Qué elemento deseas consultar?: " ).lower()
+
+# Haceoms un bucle para que el usuario no pueda seleccionar otra cosa que no esté en la lista de opciones
+while elemento not in op:
+    print("Lo sentimos tu selección no está disponible, o quizás está mal escrito")
+    elemento = input("¿Qué elemento deseas consultar?: ").lower()
+# Creamos un condicional para averiguar la existencia de un elemento dentro del diccionario
+if elemento == "nombre":
+    print(informacion_personal["Nombre"])
+if elemento == "edad":
+    print(informacion_personal["Edad"])
+if elemento == "ciudad":
+    print(informacion_personal["Ciudad"])
+if elemento == "profesión" or elemento == "profesion":
+    print(informacion_personal["Profesión"])
+
+print("Estes es el diccionario principal", informacion_personal)
+#Cambiamos la clave ciudad
+informacion_personal["Ciudad"] = "Cuenca"
+
+#Agregamos una nueva clave
+informacion_personal["Teléfono"] = "0939103555"
+
+# Imprimimos nuevo diccionario
+print("")
+print("Esta es el nuevo diccionario", informacion_personal)
